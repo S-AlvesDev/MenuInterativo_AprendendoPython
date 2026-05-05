@@ -1,79 +1,159 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SS Imóveis</title>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+body {
+  background: #f4f6f9;
+}
 
-</head>
+/* HEADER */
+header {
+  position: fixed;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.3s;
+  z-index: 100;
+}
 
-<body>
+header.scrolled {
+  background: #000;
+}
 
-<header id="header">
-  <div class="logo">SS Imóveis</div>
+.logo {
+  color: white;
+  font-weight: 700;
+}
 
-  <nav>
-    <a href="#">Início</a>
-    <a href="#">Imóveis</a>
-    <a href="#">Contato</a>
-    <a href="login.html" class="btn">Entrar</a>
-  </nav>
-</header>
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
 
-<section class="hero">
-  <div class="overlay"></div>
+.btn {
+  background: #00aaff;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
 
-  <div class="hero-content">
-    <h1>Seu novo imóvel começa aqui</h1>
-    <p>As melhores oportunidades em Nova Cruz e região</p>
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa') center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
 
-    <div class="search-box">
-      <input type="text" placeholder="Cidade, bairro ou tipo...">
-      <button>Buscar</button>
-    </div>
-  </div>
-</section>
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+}
 
-<section class="imoveis">
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: white;
+}
 
-  <h2>Destaques</h2>
+.hero h1 {
+  font-size: 48px;
+}
 
-  <div class="grid">
+.search-box {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
 
-    <div class="card">
-      <span class="tag vendido">VENDIDO</span>
-      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
-      <div class="info">
-        <h3>Casa moderna</h3>
-        <p>3 quartos • 2 banheiros</p>
-        <span class="price">R$ 350.000</span>
-      </div>
-    </div>
+.search-box input {
+  padding: 14px;
+  width: 280px;
+  border: none;
+  border-radius: 8px 0 0 8px;
+}
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae">
-      <div class="info">
-        <h3>Apartamento central</h3>
-        <p>2 quartos • 1 vaga</p>
-        <span class="price">R$ 220.000</span>
-      </div>
-    </div>
+.search-box button {
+  padding: 14px;
+  background: #00aaff;
+  border: none;
+  color: white;
+  border-radius: 0 8px 8px 0;
+}
 
-  </div>
+/* CARDS */
+.imoveis {
+  padding: 80px 40px;
+}
 
-</section>
+.grid {
+  display: flex;
+  gap: 30px;
+}
 
-<!-- WHATSAPP FLOAT -->
-<a href="#" class="whatsapp">💬</a>
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  position: relative;
+  transition: 0.3s;
+}
 
-<footer>
-  <p>© 2026 SS Imóveis</p>
-</footer>
+.card:hover {
+  transform: scale(1.03);
+}
 
-<script src="script.js"></script>
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
 
-</body>
-</html>
+.info {
+  padding: 15px;
+}
+
+.price {
+  color: #00aaff;
+  font-weight: bold;
+}
+
+/* TAG */
+.tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  padding: 15px;
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+}
