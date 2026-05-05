@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>SS Imóveis - Nova Versão</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SS Imóveis</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <header>
-  <h1>SS Imóveis</h1>
+  <div class="logo">SS Imóveis</div>
   <nav>
     <a href="#">Início</a>
     <a href="#">Imóveis</a>
@@ -18,27 +21,44 @@
 </header>
 
 <section class="hero">
-  <h2>Encontre o imóvel ideal</h2>
-  <input type="text" placeholder="Digite cidade ou bairro">
-  <button>Buscar</button>
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Encontre o imóvel ideal</h1>
+    <p>Casas, apartamentos e terrenos em Nova Cruz e região</p>
+
+    <div class="search-box">
+      <input type="text" placeholder="Cidade, bairro ou tipo...">
+      <button>Buscar</button>
+    </div>
+  </div>
 </section>
 
-<section class="cards">
-  <div class="card">
-    <img src="https://via.placeholder.com/300">
-    <h3>Casa moderna</h3>
-    <p>R$ 350.000</p>
-  </div>
+<section class="imoveis">
+  <h2>Imóveis em destaque</h2>
 
-  <div class="card">
-    <img src="https://via.placeholder.com/300">
-    <h3>Apartamento</h3>
-    <p>R$ 220.000</p>
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
+      <div class="info">
+        <h3>Casa moderna</h3>
+        <p class="price">R$ 350.000</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae">
+      <div class="info">
+        <h3>Apartamento</h3>
+        <p class="price">R$ 220.000</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <footer>
-  <p>© 2026 SS Imóveis</p>
+  <p>© 2026 SS Imóveis • Todos os direitos reservados</p>
 </footer>
 
 </body>
