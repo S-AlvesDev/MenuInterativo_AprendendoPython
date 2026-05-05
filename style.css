@@ -1,142 +1,79 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SS Imóveis</title>
 
-body {
-  background: #f4f6f9;
-  color: #333;
-}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-/* HEADER */
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background: rgba(0,0,0,0.8);
-  backdrop-filter: blur(8px);
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 40px;
-  z-index: 100;
-}
+</head>
 
-.logo {
-  color: white;
-  font-weight: 600;
-  font-size: 20px;
-}
+<body>
 
-nav a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-}
+<header id="header">
+  <div class="logo">SS Imóveis</div>
 
-.btn {
-  background: #00aaff;
-  padding: 8px 16px;
-  border-radius: 6px;
-}
+  <nav>
+    <a href="#">Início</a>
+    <a href="#">Imóveis</a>
+    <a href="#">Contato</a>
+    <a href="login.html" class="btn">Entrar</a>
+  </nav>
+</header>
 
-/* HERO */
-.hero {
-  height: 90vh;
-  background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa') center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
+<section class="hero">
+  <div class="overlay"></div>
 
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-}
+  <div class="hero-content">
+    <h1>Seu novo imóvel começa aqui</h1>
+    <p>As melhores oportunidades em Nova Cruz e região</p>
 
-.hero-content {
-  position: relative;
-  text-align: center;
-  color: white;
-}
+    <div class="search-box">
+      <input type="text" placeholder="Cidade, bairro ou tipo...">
+      <button>Buscar</button>
+    </div>
+  </div>
+</section>
 
-.hero h1 {
-  font-size: 40px;
-}
+<section class="imoveis">
 
-.hero p {
-  margin: 10px 0 20px;
-}
+  <h2>Destaques</h2>
 
-.search-box {
-  display: flex;
-  justify-content: center;
-}
+  <div class="grid">
 
-.search-box input {
-  padding: 12px;
-  width: 250px;
-  border: none;
-  border-radius: 5px 0 0 5px;
-}
+    <div class="card">
+      <span class="tag vendido">VENDIDO</span>
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
+      <div class="info">
+        <h3>Casa moderna</h3>
+        <p>3 quartos • 2 banheiros</p>
+        <span class="price">R$ 350.000</span>
+      </div>
+    </div>
 
-.search-box button {
-  padding: 12px 20px;
-  border: none;
-  background: #00aaff;
-  color: white;
-  border-radius: 0 5px 5px 0;
-}
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae">
+      <div class="info">
+        <h3>Apartamento central</h3>
+        <p>2 quartos • 1 vaga</p>
+        <span class="price">R$ 220.000</span>
+      </div>
+    </div>
 
-/* IMÓVEIS */
-.imoveis {
-  padding: 80px 40px;
-}
+  </div>
 
-.imoveis h2 {
-  margin-bottom: 30px;
-}
+</section>
 
-.grid {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-}
+<!-- WHATSAPP FLOAT -->
+<a href="#" class="whatsapp">💬</a>
 
-.card {
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 300px;
-  transition: 0.3s;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
+<footer>
+  <p>© 2026 SS Imóveis</p>
+</footer>
 
-.card:hover {
-  transform: translateY(-5px);
-}
+<script src="script.js"></script>
 
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.info {
-  padding: 15px;
-}
-
-.price {
-  color: #00aaff;
-  font-weight: bold;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-}
+</body>
+</html>
