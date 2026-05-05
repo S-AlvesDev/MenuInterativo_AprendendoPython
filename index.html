@@ -4,14 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SS Imóveis</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<header>
+<header id="header">
   <div class="logo">SS Imóveis</div>
+
   <nav>
     <a href="#">Início</a>
     <a href="#">Imóveis</a>
@@ -22,9 +25,10 @@
 
 <section class="hero">
   <div class="overlay"></div>
+
   <div class="hero-content">
-    <h1>Encontre o imóvel ideal</h1>
-    <p>Casas, apartamentos e terrenos em Nova Cruz e região</p>
+    <h1>Seu novo imóvel começa aqui</h1>
+    <p>As melhores oportunidades em Nova Cruz e região</p>
 
     <div class="search-box">
       <input type="text" placeholder="Cidade, bairro ou tipo...">
@@ -34,32 +38,42 @@
 </section>
 
 <section class="imoveis">
-  <h2>Imóveis em destaque</h2>
+
+  <h2>Destaques</h2>
 
   <div class="grid">
 
     <div class="card">
+      <span class="tag vendido">VENDIDO</span>
       <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
       <div class="info">
         <h3>Casa moderna</h3>
-        <p class="price">R$ 350.000</p>
+        <p>3 quartos • 2 banheiros</p>
+        <span class="price">R$ 350.000</span>
       </div>
     </div>
 
     <div class="card">
       <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae">
       <div class="info">
-        <h3>Apartamento</h3>
-        <p class="price">R$ 220.000</p>
+        <h3>Apartamento central</h3>
+        <p>2 quartos • 1 vaga</p>
+        <span class="price">R$ 220.000</span>
       </div>
     </div>
 
   </div>
+
 </section>
 
+<!-- WHATSAPP FLOAT -->
+<a href="#" class="whatsapp">💬</a>
+
 <footer>
-  <p>© 2026 SS Imóveis • Todos os direitos reservados</p>
+  <p>© 2026 SS Imóveis</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
